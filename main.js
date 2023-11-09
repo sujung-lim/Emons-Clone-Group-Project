@@ -1,24 +1,24 @@
-const previousBtn = document.querySelector("#previous-btn");
-const nextBtn = document.querySelector("#next-btn");
-let imgWrapChild = document.querySelector(".wrap-fig").childElementCount;
-let count = document.querySelector("#count");
+const previousBtn = document.querySelector('#previous-btn');
+const nextBtn = document.querySelector('#next-btn');
+let imgWrapChild = document.querySelector('.wrap-fig').childElementCount;
+let count = document.querySelector('#count');
 let sum = 0;
 let sumPlus2 = 0;
 let countNum = 1;
 const y = 34;
 
-nextBtn.addEventListener("click", next);
-previousBtn.addEventListener("click", perv);
+nextBtn.addEventListener('click', next);
+previousBtn.addEventListener('click', perv);
 
 // next btn을 눌렀을때 action
 function next() {
   // 33값이 없어지지않도록 복합대입 연산자를 사용
   sum += y;
 
-  document.querySelector(".wrap-fig").style.transform = `translateX(-${sum}%)`;
-  document.querySelector(".wrap-fig").style.transition = "all 0.7s";
+  document.querySelector('.wrap-fig').style.transform = `translateX(-${sum}%)`;
+  document.querySelector('.wrap-fig').style.transition = 'all 0.7s';
   const translate = (document.querySelector(
-    ".wrap-fig"
+    '.wrap-fig'
   ).style.transform = `translateX(-${sum}%)`);
   const translateValue = Number(translate.substring(11, 14));
 
@@ -42,8 +42,8 @@ function next() {
 function perv() {
   // 복합대입 연산자 값이 쌓이게
   sum -= y;
-  document.querySelector(".wrap-fig").style.transform = `translateX(-${sum}%)`;
-  document.querySelector(".wrap-fig").style.transition = "all 0.7s";
+  document.querySelector('.wrap-fig').style.transform = `translateX(-${sum}%)`;
+  document.querySelector('.wrap-fig').style.transition = 'all 0.7s';
 
   if (countNum <= 5) {
     countNum -= 1;
